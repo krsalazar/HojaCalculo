@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hoja de Cálculo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable@8.4.0/dist/handsontable.full.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hoja de Cálculo</h1>
+        <div id="button-container">
+            <button onclick="addSheet()">Agregar Hoja</button>
+            <button onclick="renameSheet()">Renombrar Hoja</button>
+            <button onclick="addRow()">Agregar Fila</button>
+            <button onclick="addCol()">Agregar Columna</button>
+        </div>
+        <div id="spreadsheet"></div>
+        <div id="sheets-container"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@8.4.0/dist/handsontable.full.min.js""></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
